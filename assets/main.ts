@@ -1,9 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Meta from "vue-meta";
-import Switch from "buefy/dist/esm/switch";
-import Radio from "buefy/dist/esm/radio";
-import Field from "buefy/dist/esm/field";
+// @ts-ignore
+import { Switch, Radio, Field } from "buefy";
 import store from "./store";
 import config from "./store/config";
 import App from "./App.vue";

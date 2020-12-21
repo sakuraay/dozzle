@@ -11,7 +11,7 @@ module.exports = (env, argv) => ({
     maxEntrypointSize: 600000,
   },
   devtool: argv.mode !== "production" ? "inline-cheap-source-map" : false,
-  entry: ["./assets/main.js", "./assets/styles.scss"],
+  entry: ["./assets/main.ts", "./assets/styles.scss"],
   output: {
     path: path.resolve(__dirname, "./static"),
     filename: "[name].js",
@@ -22,6 +22,11 @@ module.exports = (env, argv) => ({
       {
         test: /\.vue$/,
         loader: "vue-loader",
+      },
+      {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
       },
       {
         test: /\.(sass|scss|css)$/,
@@ -64,7 +69,7 @@ module.exports = (env, argv) => ({
     alias: {
       vue$: "vue/dist/vue.runtime.esm.js",
     },
-    extensions: ["*", ".js", ".vue", ".json"],
+    extensions: ["*", ".ts", ".js", ".vue", ".json"],
   },
   devServer: {
     port: 8081,
