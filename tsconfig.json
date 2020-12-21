@@ -2,10 +2,19 @@
   "compilerOptions": {
     "outDir": "./static/",
     "noImplicitAny": true,
-    "module": "es6",
+    "module": "esnext",
     "target": "es2018",
     "lib": ["es2018", "dom"],
     "allowJs": true,
-    "moduleResolution": "node"
-  }
+    "moduleResolution": "node",
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "assets/*"
+      ]
+    },
+  },
+  "include": ["./assets/**/*"],
+  "exclude": ["node_modules", "**/*.spec.*"]
 }

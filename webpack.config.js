@@ -3,6 +3,7 @@ const { VueLoaderPlugin } = require("vue-loader");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const WebpackPwaManifest = require("webpack-pwa-manifest");
+const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 
 module.exports = (env, argv) => ({
   stats: { children: false, entrypoints: false, modules: false },
@@ -24,7 +25,7 @@ module.exports = (env, argv) => ({
         loader: "vue-loader",
       },
       {
-        test: /\.tsx?$/,
+        test: /\.ts$/,
         use: "ts-loader",
         exclude: /node_modules/,
       },
@@ -66,10 +67,11 @@ module.exports = (env, argv) => ({
     }),
   ],
   resolve: {
+    plugins: [new TsconfigPathsPlugin()],
     alias: {
       vue$: "vue/dist/vue.runtime.esm.js",
     },
-    extensions: ["*", ".ts", ".js", ".vue", ".json"],
+    extensions: [".ts", ".js", ".vue"],
   },
   devServer: {
     port: 8081,

@@ -38,17 +38,18 @@
   </main>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from "vue";
 import { mapActions, mapGetters, mapState } from "vuex";
 import { Splitpanes, Pane } from "splitpanes";
 
-import LogContainer from "./components/LogContainer";
-import SideMenu from "./components/SideMenu";
-import MobileMenu from "./components/MobileMenu";
-import Search from "./components/Search";
-import Icon from "./components/Icon";
+import LogContainer from "@/components/LogContainer.vue";
+import SideMenu from "@/components/SideMenu.vue";
+import MobileMenu from "@/components/MobileMenu.vue";
+import Search from "@/components/Search.vue";
+import Icon from "@/components/Icon.vue";
 
-export default {
+export default Vue.extend({
   name: "App",
   components: {
     Icon,
@@ -121,7 +122,7 @@ export default {
       }
     },
   },
-};
+});
 </script>
 
 <style scoped lang="scss">

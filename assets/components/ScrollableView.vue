@@ -21,9 +21,9 @@
   </section>
 </template>
 
-<script>
-import Icon from "./Icon";
-import ScrollProgress from "./ScrollProgress";
+<script lang="ts">
+import Icon from "./Icon.vue";
+import ScrollProgress from "./ScrollProgress.vue";
 
 export default {
   props: {

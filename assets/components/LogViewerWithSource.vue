@@ -4,9 +4,9 @@
   </log-event-source>
 </template>
 
-<script>
-import LogEventSource from "./LogEventSource";
-import LogViewer from "./LogViewer";
+<script lang="ts">
+import LogEventSource from "@/components/LogEventSource.vue";
+import LogViewer from "@/components/LogViewer.vue";
 
 export default {
   props: ["id"],

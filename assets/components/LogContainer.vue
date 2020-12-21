@@ -19,13 +19,13 @@
   </scrollable-view>
 </template>
 
-<script>
+<script lang="ts">
 import { mapGetters } from "vuex";
 
-import LogViewerWithSource from "./LogViewerWithSource";
-import ScrollableView from "./ScrollableView";
-import ContainerTitle from "./ContainerTitle";
-import ContainerStat from "./ContainerStat";
+import LogViewerWithSource from "@/components/LogViewerWithSource.vue";
+import ScrollableView from "@/components/ScrollableView.vue";
+import ContainerTitle from "@/components/ContainerTitle.vue";
+import ContainerStat from "@/components/ContainerStat.vue";
 
 export default {
   props: {

@@ -3,10 +3,11 @@ import VueRouter from "vue-router";
 import Meta from "vue-meta";
 // @ts-ignore
 import { Switch, Radio, Field } from "buefy";
-import store from "./store";
-import config from "./store/config";
-import App from "./App.vue";
-import { Container, Settings, Index, Show, ContainerNotFound, PageNotFound } from "./pages";
+import store from "@/store";
+import config from "@/store/config";
+import App from "@/App.vue";
+import { Container, Settings, Index, Show, ContainerNotFound, PageNotFound } from "@/pages";
+
 
 Vue.use(VueRouter);
 Vue.use(Meta);
